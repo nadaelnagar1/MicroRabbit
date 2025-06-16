@@ -24,8 +24,8 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
 });
 
-
-DependencyContainer.RegisterServices(builder.Services);
+BankingDependencyContainer.RegisterServices(builder.Services);
+CommonDependencyContainer.RegisterServices(builder.Services);
 
 
 var app = builder.Build();
