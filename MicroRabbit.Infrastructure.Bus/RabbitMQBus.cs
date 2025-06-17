@@ -71,11 +71,7 @@ namespace MicroRabbit.Infra.Bus
                 _handlers.Add(eventName, new List<Type>());
             }
 
-            //if (!_handlers[eventName].Any(s => s.GetType() == handlerType))
-            //{
-            //   throw new ArgumentException(
-            //       $"Handler Type {handlerType.Name} already registered for '{eventName}'", nameof(handlerType));
-            //}
+          
 
             if (_handlers[eventName].Any(s => s == handlerType))
             {
